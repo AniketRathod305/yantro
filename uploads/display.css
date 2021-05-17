@@ -1,0 +1,27 @@
+
+
+
+
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+.image{
+    width:300px;
+    height:300px;
+    margin-right: 2rem;
+}
+
+.buttons{
+    text-align: center;
+    margin-bottom: 2rem;    
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}

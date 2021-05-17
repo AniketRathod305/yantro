@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+    <style type="text/css">
+    	#formlayout{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+          margin-left: 400px;
+          margin-top: 200px;
+          border: 2px solid black;
+          padding: 10px;
+          border-radius: 3px;
+        }
+     
+    </style>
+  
+</head>
+<body>
+    <form action='/submitmsg' method="POST" id='formlayout'>
+    <div>
+    <label>Enter name:</label>
+    <input type='text' name='name' id='name' required>
+    </div>
+    <br>
+    <div>
+    <label>Enter date:</label>
+    <input type='date' name='date' id='date' required>
+    </div>
+    <br>
+    <div>
+    <label>Enter messsage:</label>
+    <textarea  name='message' required></textarea>
+    </div>
+    <br>
+    <button type='submit'>Submit </button>
+    </form>
+</body>
+</html>

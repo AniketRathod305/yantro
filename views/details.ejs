@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+        }
+
+        .image {
+            width: 300px;
+            height: 300px;
+            margin-right: 2rem;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Name of School</h1>
+        </div>
+
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="row">
+                <div class="col container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Name:<%= user.name %>
+                    </h1>
+                    <p class="col-md-8 fs-4">
+                    <div id='layout'>
+                        <div id='layout1'>
+                            <h3>
+                                <p>Age:<%= user.age %>
+                                </p>
+                            </h3>
+                            <h3>
+                                <p>DOB:<%= user.dob%>
+                                </p>
+                            </h3>
+                            <h3>
+                                <p>Std:<%= user.std%>
+                                </p>
+                            </h3>
+                            <h3>
+                                <p>Div:<%= user.div%>
+                                </p>
+                            </h3>
+                            <h3>
+                                <p>Rollno:<%= user.rollno%>
+                                </p>
+                            </h3>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+     
+
+        <div class="col">
+            <form action="/marks/<%=user._id %>" method="get">
+                <button class="btn btn-primary btn-md buttons">Enter Marks</button>
+            </form>
+        </div>
+        <div class="col">
+            <form action="/results/<%=user._id %>" method="get">
+                <button class="btn btn-primary btn-md buttons">Show Marks</button>
+        </div>
+
+    </div>
+    </div>
+
+    </form>
+
+
+
+    <script>
+        const trash = document.querySelector('a.delete')
+        trash.addEventListener('click', (e) => {
+            const endpoint = `/display/${e.target.dataset.doc}`
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+                .then((res) => res.json())
+                .then((data) => { widow.location.href = data.redirect })
+                .catch((err) => { console.log(err) })
+        })
+    </script>
+
+    </div>
+</body>
+
+</html>

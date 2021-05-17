@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='welcome.css'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <img src="school-logo.jpg" alt="" srcset="">
+        <h1 class="display-4 fw-normal">Name of School</h1>
+    </div>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="row">
+            <div class="col container-fluid py-5">
+                <h1 class="display-5 fw-bold">Welcome <%= users.name %>
+                </h1>
+                <p class="col-md-8 fs-4">
+                <div id='layout'>
+                    <div id='layout1'>
+                        <h3>
+                            <p>Age:<%= users.age %>
+                            </p>
+                        </h3>
+                        <h3>
+                            <p>DOB:<%= users.dob%>
+                            </p>
+                        </h3>
+                        <h3>
+                            <p>Std:<%= users.std%>
+                            </p>
+                        </h3>
+                        <h3>
+                            <p>Div:<%= users.div%>
+                            </p>
+                        </h3>
+                        <h3>
+                            <p>Rollno:<%= users.rollno%>
+                            </p>
+                        </h3>
+                    </div>
+                    </p>
+                </div>
+            </div>
+            <div class="col imgcol container-fluid py-5">
+                <img class='image col-md-6 float-md-end mb-3 ms-md-3' src='<%= users.image %>' alt=''>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <a href='/payments'>
+            <button class="btn btn-primary btn-md" type="button">Pay Fees</button></a>
+
+        <a href='/results/<%= users._id %>'>
+            <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                View Marks</button></a>
+
+        <a href='/logout'>
+            <button class="btn btn-primary btn-md" type="button">Log Out</button></a>
+
+        <a href='/message/<%= users._id %>'>   <button class="btn btn-primary btn-md" type="button">Message admin</button></a>
+
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <%= users.name %> Marks
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col container-fluid py-5">
+                        <p class="col-md-8 fs-4">
+                        <div id='layout'>
+                            <div id='layout1'>
+                                <h3>
+                                    <p>Physics:<%= users.Physics %>
+                                    </p>
+                                </h3>
+                                <h3>
+                                    <p>Chemistry:<%= users.Chemistry %>
+                                    </p>
+                                </h3>
+                                <h3>
+                                    <p>Mathematics:<%= users.Mathematics %>
+                                    </p>
+                                </h3>
+                                <h3>
+                                    <p>Percentage:<%= users.Percentage %>
+                                    </p>
+                                </h3>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+
+</html>
+
+
+
+
+
+<!-- Modal -->

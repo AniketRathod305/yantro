@@ -1,0 +1,32 @@
+#layout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-left: 520px;
+    
+}
+#heading{
+    text-align: center;
+    margin-top: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(203, 203, 221);
+}
+
+input{
+    background-color:white;
+    border: none;
+   
+}
+
+
+#signup{
+    background-color: steelblue;
+    border: none;
+    font-size: larger;
+    padding: 5px;
+    margin-left: 20px;
+}

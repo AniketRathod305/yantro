@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div>
+               <h3>Name:<%= user.name %></h3>
+               <p>Age:<%= user.age %></p>
+               <p>DOB:<%= user.dob%></p>
+               <p>Qualifications:<%= user.qualification%></p>
+            
+              
+                <script>
+                const trash=document.querySelector('a.delete')
+                trash.addEventListener('click',(e)=>{
+                    const endpoint=`/display2/${e.target.dataset.doc}`
+        
+                    fetch(endpoint,{
+                        method:'DELETE'
+                    })
+                    .then((res)=>res.json())
+                    .then((data)=>{widow.location.href=data.redirect})
+                    .catch((err)=>{console.log(err)})
+                })
+                </script>
+        
+    </div>
+</body>
+</html>
